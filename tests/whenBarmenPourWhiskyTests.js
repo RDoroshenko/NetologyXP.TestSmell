@@ -30,17 +30,11 @@ suite('when barmen pour whisky', function () {
     });
 
     suite('i ask -10 grams', function () {
-        test('I get an error', function (done) {
-            fs.readFile('whisky.jpg', function (err, whisky) {
-                if (err) {
-                    throw err;
-                }
-
-                var iAskVolume = -10;
-
-                expect(() => pour(whisky, iAskVolume)).to.throw(/Invalid volume of whisky/);
-                done();
-            });
+        test('I am told that volume is invalid', function (done) {
+            var whisky = showWhisky();
+            var iAskVolume = -10;
+            expect(() => pour(whisky, iAskVolume)).to.throw(/Invalid volume of whisky/);
+            done();
         });
 
 

@@ -24,3 +24,7 @@ export function getMyCar() {
 export function goToBar(car) {
 
 }
+
+export function showWhisky() {
+
+}

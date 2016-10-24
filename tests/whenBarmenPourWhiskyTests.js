@@ -1,6 +1,6 @@
 import assert from 'assert'
 import { pour, free as freeBarmen } from '../src/barmen'
-import { drink, sober, goToBar, getMyCar, getTotallyDrunked, isDrunked } from '../src/me'
+import { drink, sober, goToBar, getMyCar, getTotallyDrunked, isDrunked, showWhisky } from '../src/me'
 import { download } from '../src/imageDownloader'
 import fs from 'fs'
 import { expect } from 'chai'
@@ -11,32 +11,21 @@ suite('when barmen pour whisky', function () {
     setup(function (done) {
         this.timeout(20000);
         sober();
-        download('http://www.rosa-obs.com/images/ccd/M31_karel_full.jpg', 'mycar.jpg', function() {
-            var car = getMyCar("mycar.jpg");
-            goToBar(car);
-            freeBarmen();
-            done();
-        });
+        var imageData = [];
+        var car = getMyCar(imageData);
+        goToBar(car);
+        freeBarmen();
+        done();
     });
 
     suite('i ask 50 grams', function () {
         test('I get and drink whisky', function (done) {
-            fs.readFile('whisky.jpg', function (err, whisky) {
-                if (err) {
-                    throw err;
-                }
-
+                var whisky = showWhisky();
                 var iAskVolume = 50;
-
                 var volumeInGlass = pour(whisky, iAskVolume);
                 drink(volumeInGlass);
-
-                assert.equal(iAskVolume, volumeInGlass);
-                assert.equal(false, isDrunked());
-                assert.equal(50, getTotallyDrunked());
-
+                expect(volumeInGlass).is.equal(iAskVolume);
                 done();
-            });
         });
     });
 

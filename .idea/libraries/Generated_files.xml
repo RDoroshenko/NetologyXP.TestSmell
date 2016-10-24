@@ -2,9 +2,8 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/tests/whenBarmenPourWhiskyTests-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/imageDownloader-compiled.js" />
-        <item url="file://$PROJECT_DIR$/tests/stringAsserts-compiled.js" />
+        <item url="file://$PROJECT_DIR$/tests/whenBarmenPourWhiskyTests-compiled.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -26,9 +25,9 @@
       <root url="file://$PROJECT_DIR$/tests/timeTests-compiled.js" />
       <root url="file://$PROJECT_DIR$/tests/whenBarmenPourWhiskyBddTests-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/me-compiled.js" />
-      <root url="file://$PROJECT_DIR$/tests/whenBarmenPourWhiskyTests-compiled.js" />
-      <root url="file://$PROJECT_DIR$/src/imageDownloader-compiled.js" />
       <root url="file://$PROJECT_DIR$/tests/stringAssertsTests-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/imageDownloader-compiled.js" />
+      <root url="file://$PROJECT_DIR$/tests/whenBarmenPourWhiskyTests-compiled.js" />
     </CLASSES>
     <SOURCES />
   </library>

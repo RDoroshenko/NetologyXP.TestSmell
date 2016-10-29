@@ -42,10 +42,10 @@ suite('when barmen pour whisky', function () {
 
     suite('i ask 500 grams', function() {
         test('Barmen said there is no such glass', function(done) {
-
+            let me = username();
             username().then(un => {
                 console.log(un);
-                if (un === "alex4Zero") {
+                if (un === me) {
                 }
                 var iAskVolume = 500;
                 var whisky = 1;
